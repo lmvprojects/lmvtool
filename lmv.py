@@ -1,16 +1,3 @@
-#-----------------[ SERER STATUS ]-------------------#
-
-import requests,sys,time
-def animation(u):
-	for e in u + "\n":sys.stdout.write(e);sys.stdout.flush();time.sleep(0.01)
-sts = "SERVER STATUS = ON"
-scheck = requests.get("https://github.com/lmvprojects/approval/blob/main/approval.txt").text
-if sts in scheck:
-    pass
-else: 
-    animation("\x1b[1;97m [\u001b[36m×\033[1;37m] SERVER IS ON MAINTAINENCE ");
-    time.sleep(1)
-    exit()
 
 #-----------------[ IMPORT-MODULE ]-------------------#
 
